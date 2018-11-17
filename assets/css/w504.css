@@ -1,0 +1,59 @@
+@media screen and (max-width: 504px) {
+    
+    /*
+    ==============================
+    BASIC SETUP
+    ==============================
+    */
+
+
+    /*
+    ==============================
+    HEADER
+    ==============================
+    */
+
+    /*
+    ==============================
+    SECTION
+    ==============================
+    */
+
+    .sGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .message {
+        grid-column: span 2;
+    }
+
+    .crystalBox {
+        grid-column: span 2;
+    }
+
+    /*
+    ==============================
+    FOOTER
+    ==============================
+    */
+
+    footer .container {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        width: 100vw;
+    }
+
+    footer .container > * {
+        text-align: center;
+    }
+
+    footer nav ul {
+        justify-content: space-around;       
+    }
+
+    footer nav li {
+        text-align: center;
+        padding-right: 0;
+    }
+
+}

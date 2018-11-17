@@ -54,10 +54,13 @@ strong {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000; 
+    background: #faebd7; 
     border-radius: 3px;
 }
 
+::selection {
+    background: #faebd7;
+}
 
 /*
 ==============================
@@ -148,6 +151,7 @@ section {
     width: 150px;
     height: 120px;
     transition: transform 0.5s;
+    cursor: pointer;
 }
 
 .crystal:hover {
@@ -318,4 +322,32 @@ footer {
 footer .container {
     background: rgba(255, 255, 255, 0.8);
     padding: 30px;
+    border-radius: 0 0 15px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+footer nav ul {
+    display: flex;
+}
+
+footer nav li {
+    flex-basis: auto;
+    padding-right: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    transition: all .75s;
+}
+
+nav a:hover {
+    color: #01adff;
+}
+
+.copyright {
+    text-align: right;
 }
