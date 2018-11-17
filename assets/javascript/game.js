@@ -52,7 +52,7 @@ var crystal = {
             
             var randomNumber = Math.floor(Math.random() * this.cValues.length) + 1;
             
-            console.log(randomNumber);
+            // console.log(randomNumber);
 
             if (typeof this.cValues[randomNumber] !== 'number') {
 
@@ -64,7 +64,7 @@ var crystal = {
             // add crystal value to unique crystal values array
             this.cValue.push(this.cValues[randomNumber]); 
 
-            console.log(this.cValue);
+            // console.log(this.cValue);
 
             // ensure we grab the index of the crystal value we added
             // randomNumber = randomNumber - 1;
@@ -72,7 +72,7 @@ var crystal = {
             // replace crystal value from possible options to avoid duplicates
             this.cValues.splice(this.cValues[randomNumber], 1, '');
 
-            console.log(this.cValues);
+            // console.log(this.cValues);
             }
             
         }
@@ -83,7 +83,7 @@ var crystal = {
         this.crystalC = this.cValue[2];
         this.crystalD = this.cValue[3];
 
-        console.log("Clues for landlubbers:");
+        console.log("Cheats for landlubbers:");
         console.log("BLUE: " + crystal.crystalA + " | RED: " + crystal.crystalB + " | YELLOW: " + crystal.crystalC + " | GREEN: " + crystal.crystalD);
 
     },
