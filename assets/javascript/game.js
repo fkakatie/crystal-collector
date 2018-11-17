@@ -46,15 +46,17 @@ var crystal = {
     crystalValue: function() {
 
         this.cValue = [];
-        this.cValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        this.cValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-        for (var i = 0; this.cValue.length < 4; i++) {
+        for (var i = 1; this.cValue.length < 4; i++) {
             
-            var randomNumber = Math.floor(Math.random() * this.cValues.length);
+            var randomNumber = Math.floor(Math.random() * this.cValues.length) + 1;
+            
+            console.log(randomNumber);
 
             if (typeof this.cValues[randomNumber] !== 'number') {
 
-                randomNumber = Math.floor(Math.random() * this.cValues.length);
+                randomNumber = Math.floor(Math.random() * this.cValues.length) + 1;
             } 
 
             else {     
@@ -62,15 +64,15 @@ var crystal = {
             // add crystal value to unique crystal values array
             this.cValue.push(this.cValues[randomNumber]); 
 
-            // console.log(this.cValue);
+            console.log(this.cValue);
 
             // ensure we grab the index of the crystal value we added
-            randomNumber = randomNumber - 1;
+            // randomNumber = randomNumber - 1;
 
             // replace crystal value from possible options to avoid duplicates
             this.cValues.splice(this.cValues[randomNumber], 1, '');
 
-            // console.log(this.cValues);
+            console.log(this.cValues);
             }
             
         }
