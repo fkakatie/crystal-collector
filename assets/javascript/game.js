@@ -34,6 +34,15 @@ var crystal = {
 
     userScore: 0,
 
+    clickMessages: [
+        "Excellent choice, matey.",
+        "Choose carefully...",       
+        "Quick, fill yer pockets!",       
+        "Keep yer eye on yer target.",        
+        "Handsomely done. ",    
+        "Shiver me timbers!"
+    ],
+
     crystalValue: function() {
 
         this.cValue = [];
@@ -77,7 +86,8 @@ var crystal = {
         this.crystalC = this.cValue[2];
         this.crystalD = this.cValue[3];
 
-        console.log(crystal.crystalA + " " + crystal.crystalB + " " + crystal.crystalC + " " + crystal.crystalD);
+        console.log("Clues for landlubbers:");
+        console.log("BLUE: " + crystal.crystalA + " | RED: " + crystal.crystalB + " | YELLOW: " + crystal.crystalC + " | GREEN: " + crystal.crystalD);
 
     },
 
@@ -85,20 +95,18 @@ var crystal = {
         this.numberToGuess = Math.floor(Math.random() * (120 - 19 + 1) + 19);
 
         $('#numberToGuess').text(this.numberToGuess);
-
-        console.log(this.numberToGuess);
     },
 
     checkScore: function() {
         if (crystal.userScore == crystal.numberToGuess) {
-            console.log("you win!");
+            $('#message').text("Ye sailed away with yer bounty! Congrats! Try again?");
             this.wins++;
             $('#wins').text(this.wins);
             crystal.newGame();
         } 
         
         else if (crystal.userScore > crystal.numberToGuess) {
-            console.log("you lose!");
+            $('#message').text("Blimey! Ye've been caught red-handed. Try again!");
             this.losses++;
             $('#losses').text(this.losses);
             crystal.newGame();
@@ -119,24 +127,28 @@ var crystal = {
 $('#crystalA').click(function() {
     crystal.userScore = crystal.userScore + crystal.crystalA;
     $('#userScore').text(crystal.userScore);
+    $('#message').text("Fill yer pockets quickly but carefully.");
     crystal.checkScore();
 });
 
 $('#crystalB').click(function() {
     crystal.userScore = crystal.userScore + crystal.crystalB;
     $('#userScore').text(crystal.userScore);
+    $('#message').text("Fill yer pockets quickly but carefully.");
     crystal.checkScore();
 });
 
 $('#crystalC').click(function() {
     crystal.userScore = crystal.userScore + crystal.crystalC;
     $('#userScore').text(crystal.userScore);
+    $('#message').text("Fill yer pockets quickly but carefully.");
     crystal.checkScore();
 });
 
 $('#crystalD').click(function() {
     crystal.userScore = crystal.userScore + crystal.crystalD;
     $('#userScore').text(crystal.userScore);
+    $('#message').text("Fill yer pockets quickly but carefully.");
     crystal.checkScore();
 });
 

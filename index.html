@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Crystal Collector</title>
+    <title>Crystal Caper</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Pirata+One" rel="stylesheet">
 
     <!-- MEDIA QUERIES -->
 
@@ -20,7 +23,7 @@
     <header>
 
         <div class="container title">
-            <h1>Crystal Collector</h1>
+            <h1>A Considerable Crystal Caper</h1>
         </div>
 
     </header>
@@ -28,7 +31,11 @@
     <section>
 
         <div class="container subhead">
-            <h2>Instructions:</h2>
+            <h2>Code of Conduct:</h2>
+
+            <p>Fill yer pirate ship wit' loot afore ye get caught! Collect the <strong>target value</strong> 'n sail away a victor... But beware, if ye get too greedy 'n yer <strong>current haul</strong> exceeds the target, ye'll forfeit yer reward 'n spend the night in the brig.</p>
+
+            <p>Each crystal below has a specific value, but the market be always changin'! Ye won't know the value o' the crystal 'til 'tis in yer pockets, so pick carefully. Keep an eye on yer current haul 'n best o' luck t' ye!</p>
         </div>
 
     </section>
@@ -37,25 +44,69 @@
 
         <div class="container sGrid">
 
-            <div class="scoreBoard">
-                <p>Wins: <span id="wins">0</span></p>
-                <p>Losses: <span id="losses">0</span></p>
+            <div class="message">
+                <p id="message">Ahoy! Select yer first crystal t' get started!</p>
             </div>
 
             <div class="numberToGuess">
-                <p>Guess: <span id="numberToGuess">...</span></p>
+                <p>Target Value:</p> 
+                <p id="numberToGuess"><span style="color: #900;">X</span></p>
             </div>
 
             <div class="userScore">
-                <p>Score: <span id="userScore">0</span></p>
+                <p>Current Haul:</p> 
+                <p id="userScore">0</p>
             </div>
+
+            <div class="wins">
+                <p>Successes:</p> 
+                <p id="wins">0</p>
+            </div>
+
+            <div class="losses">
+                <p>Failures:</p> 
+                <p id="losses">0</p>
+            </div>
+
+            
             
             <div class="crystalBox">
 
-                <div class="crystal" id="crystalA">A</div>
-                <div class="crystal" id="crystalB">B</div>
-                <div class="crystal" id="crystalC">C</div>
-                <div class="crystal" id="crystalD">D</div>
+                <div class="crystal" id="crystalA">
+                    
+                    <div class="crystal-top-right"></div>
+                    <div class="crystal-top-left"></div>
+                    <div class="crystal-bottom-right"></div>
+                    <div class="crystal-bottom-left"></div>
+
+                </div>
+                
+                <div class="crystal" id="crystalB">
+                    
+                    <div class="crystal-top-right"></div>
+                    <div class="crystal-top-left"></div>
+                    <div class="crystal-bottom-right"></div>
+                    <div class="crystal-bottom-left"></div>
+
+                </div>
+
+                <div class="crystal" id="crystalC">
+
+                    <div class="crystal-top-right"></div>
+                    <div class="crystal-top-left"></div>
+                    <div class="crystal-bottom-right"></div>
+                    <div class="crystal-bottom-left"></div>
+
+                </div>
+
+                <div class="crystal" id="crystalD">
+                    
+                    <div class="crystal-top-right"></div>
+                    <div class="crystal-top-left"></div>
+                    <div class="crystal-bottom-right"></div>
+                    <div class="crystal-bottom-left"></div>
+
+                </div>
 
             </div>
 
