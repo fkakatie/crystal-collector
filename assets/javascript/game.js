@@ -27,11 +27,26 @@ var crystal = {
     cValue: [], // to hold unique,non-repeated crystal values 
     cValues: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], // possible crystal values
 
+    wins: 0,
+    losses: 0,
+
+    numberToGuess: 19,
+
+    userScore: 0,
+
     crystalValue: function() {
+
+        this.cValue = [];
 
         for (var i = 0; this.cValue.length < 4; i++) {
             
             var randomNumber = Math.floor(Math.random() * this.cValues.length);
+
+            var numToAdd = randomNumber + 1;
+
+            // console.log('this is the gen number: ' + randomNumber);
+
+            // console.log('this number should be added: ' + numToAdd);
 
             if (typeof this.cValues[randomNumber] !== 'number') {
 
@@ -43,11 +58,15 @@ var crystal = {
             // add crystal value to unique crystal values array
             this.cValue.push(this.cValues[randomNumber]); 
 
+            // console.log(this.cValue);
+
             // ensure we grab the index of the crystal value we added
             randomNumber = randomNumber - 1;
 
-            // remove crystal value from possible options to avoid duplicates
+            // replace crystal value from possible options to avoid duplicates
             this.cValues.splice(this.cValues[randomNumber], 1, '');
+
+            // console.log(this.cValues);
             }
             
         }
@@ -62,8 +81,71 @@ var crystal = {
 
     },
 
+    generateNumberToGuess: function() {
+        this.numberToGuess = Math.floor(Math.random() * (120 - 19 + 1) + 19);
+
+        $('#numberToGuess').text(this.numberToGuess);
+
+        console.log(this.numberToGuess);
+    },
+
+    checkScore: function() {
+        if (crystal.userScore == crystal.numberToGuess) {
+            console.log("you win!");
+            this.wins++;
+            $('#wins').text(this.wins);
+            crystal.newGame();
+        } 
+        
+        else if (crystal.userScore > crystal.numberToGuess) {
+            console.log("you lose!");
+            this.losses++;
+            $('#losses').text(this.losses);
+            crystal.newGame();
+        }
+    },
+
+    newGame: function() {
+        this.userScore = 0;
+        $('#userScore').text(this.userScore);
+        this.crystalValue();
+        this.generateNumberToGuess();
+    }
+
 }
 
-crystal.crystalValue();
+// on crystal click functions
+
+$('#crystalA').click(function() {
+    crystal.userScore = crystal.userScore + crystal.crystalA;
+    $('#userScore').text(crystal.userScore);
+    crystal.checkScore();
+});
+
+$('#crystalB').click(function() {
+    crystal.userScore = crystal.userScore + crystal.crystalB;
+    $('#userScore').text(crystal.userScore);
+    crystal.checkScore();
+});
+
+$('#crystalC').click(function() {
+    crystal.userScore = crystal.userScore + crystal.crystalC;
+    $('#userScore').text(crystal.userScore);
+    crystal.checkScore();
+});
+
+$('#crystalD').click(function() {
+    crystal.userScore = crystal.userScore + crystal.crystalD;
+    $('#userScore').text(crystal.userScore);
+    crystal.checkScore();
+});
+
+$(document).ready(function() {
+
+    crystal.crystalValue();
+
+    crystal.generateNumberToGuess();
+
+});
 
 

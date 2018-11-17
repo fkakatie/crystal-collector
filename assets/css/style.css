@@ -1,0 +1,86 @@
+/*
+==============================
+BASICS
+==============================
+*/
+
+.container {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+/*
+==============================
+HEADER
+==============================
+*/
+
+header {
+    border: 2px solid red;
+}
+
+/*
+==============================
+SECTION
+==============================
+*/
+
+section {
+    border: 2px solid yellow;
+
+}
+
+.sGrid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.scoreBoard {
+    grid-column: span 2;
+    background: #ccc;
+    padding: 15px;
+}
+
+.numberToGuess {
+    background: #ccc;
+    padding: 15px; 
+}
+
+.userScore {
+    background: #ccc;
+    padding: 15px;
+}
+
+.crystalBox {
+    grid-column: span 2;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+.crystal {
+    background: grey;
+    justify-self: stretch;
+    align-self: center;
+    text-align: center;
+    padding: 15px;
+}
+
+/*
+==============================
+FOOTER
+==============================
+*/
+
+footer {
+    border: 2px solid blue;
+}
