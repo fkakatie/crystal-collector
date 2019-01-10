@@ -34,15 +34,6 @@ var crystal = {
 
     userScore: 0,
 
-    clickMessages: [
-        "Excellent choice, matey.",
-        "Choose carefully...",       
-        "Quick, fill yer pockets!",       
-        "Keep yer eye on yer target.",        
-        "Handsomely done. ",    
-        "Shiver me timbers!"
-    ],
-
     crystalValue: function() {
 
         this.cValue = [];

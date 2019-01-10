@@ -9,6 +9,7 @@ body {
     background-image: linear-gradient(to right, #01adff , #02a7ff);
     background-image: url(../images/bg.jpg);
     height: 100%;
+    min-height: 726px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
