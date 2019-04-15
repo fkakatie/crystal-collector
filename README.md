@@ -25,7 +25,7 @@ This project is mainly contained in simple `object`, containing all game `variab
 
 ## Where users can get help with this project ##
 
-If you have any questions about this super clever and advanced project, initiate a new pull request and leave a comment.
+If you have any questions about this super clever and advanced project, visit my portfolio and [send me a message](https://fkakatie.github.io/contact).
 
 ## Who maintains this project ## 
 
